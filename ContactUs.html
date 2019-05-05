@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Alexandru Jucan & Antohi Vasile">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet"  href="css/normalize.css">
+    <title>Explore</title>
+</head>
+<body>
+
+  <!--======= In case there is no javascript, we will display another menu, but not a too fancy menu ===-->
+  <noscript>
+    <p> Enable javascript for a better experience. </p>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li> <a href="Explore.html">Explore</a></li>
+        <li><a href="Areas.html">Areas</a></li>
+        <li><a href="ContactUs.html">Contact Us</a></li>
+        <li><a href="Accessibility.html">Accesibility</a></li>
+    </ul>
+  </noscript>
+
+        <header>
+            <!--========== THE BANNER =========-->
+            <img src="images/logo_v2.png" alt = "the logo of our website">
+             <nav id="socialmedia">
+                  <ul>
+                    <li><a href="https://www.instagram.com/sheffieldsu/" target="a_blank"> <img class="socialicon" src="images/instagram.png" alt="instagram logo"> </a></li>
+                    <li><a href="https://www.facebook.com/sheffieldstudentsunion" target="a_blank"> <img class="socialicon" src="images/facebook.png" alt="facebook logo"> </a></li>
+                    <li><a href="https://www.youtube.com/user/sheffieldunion" target="a_blank"> <img class="socialicon" src="images/youtube.png" alt="youtube logo"> </a></li>
+                    <li><a href="https://twitter.com/SheffieldSU" target="a_blank"> <img class="socialicon" src="images/twitter.png" alt = "twitter logo"> </a></li>
+                  </ul>
+              </nav>
+
+
+            <!--======== The NAVIGATION MENU =========-->
+            <div class="dropdown">
+                <input type="image" src="images/burger.png" value="false">
+                <nav id="dropdown-content">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li> <a href="Explore.html">Explore</a></li>
+                        <li><a href="Areas.html">Areas</a></li>
+                        <li><a href="ContactUs.html">Contact Us</a></li>
+                        <li><a href="Accessibility.html">Accesibility</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+    <!--============ THE CONTENT (THE FORM) ============-->
+    <main>
+        <h1>Contact Us</h1>
+        <p>Email Us with any questions or inquiries.We Would be happy to answer your question. <br />
+        * - required fields</p>
+        <form name="myForm" action="http://www.dcs.shef.ac.uk/cgi-intranet/public/FormMail.pl" method="get">
+                <input type="hidden" name="recipient" value="vantohi1@sheffield.ac.uk">
+
+                <!-- Name field -->
+                <label for="from">Your full name*</label>
+                <input type="text" name="from" id="from" placeholder="type your name here.." maxlenght="40" size="20" required>
+
+                <!-- E-mail field -->
+                <label for="email">Your e-mail*</label>
+                <input type="email" name="email" id="email" placeholder="type your email here.."
+                maxlength="50" size="20" required>
+
+                <!-- The message -->
+                <label for="message">Your message</label>
+                <textarea id="message" name="message" placeholder="Write something" ></textarea>
+
+                <!-- The Submit and Reset buttons -->
+                <input type="submit" name="submit" id="submit" value="Submit">
+                <input type="reset">
+        </form>
+    </main>
+
+    <!--============ THE FOOTER ============-->
+    <footer>
+        <div class="end">
+            <h3>About Us</h3>
+            <p>We are two students from the computer science departament at the University of Sheffield. We have created this website for the COM1008 module lectured by Prof. Dr. Emma Norling. </p>
+            <p>&copy; Vasile Antohi & Alexandru Jucan.All Rights Reserved</p>
+        </div>
+        <div class="sitemap">
+            <h3>Site Map</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li> <a href="Explore.html">Explore</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+                <li><a href="Accessibility.html">Accesibility</a></li>
+                <li><a href="EatingOptions.html"> Eating Options </a></li>
+           </ul>
+       </div>
+    </footer>
+
+    <script src="javascript/bar.js"></script>
+</body>

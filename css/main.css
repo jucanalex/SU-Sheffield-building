@@ -1,0 +1,445 @@
+/* =============================================================
+Alexandru Jucan and Antohi Vasile. 12 Nov. 2018
+written for the Students Union Building website assignment COM1008
+================================================================ */
+
+/* ======================================================= SMALL SCREENS ============================================================ */
+@media screen and (max-width:767px) {
+    /*---------GENERAL----------*/
+     #bold {
+         font-weight: bold;
+    }
+    /* when we first started designing the website, we only had the logo and the menu on the mobile version
+    and we decided to keep the logo instead of putting the social media icons */
+    #socialmedia {
+        display:none;
+   }
+    /*---------HEADER----------*/
+    /* just the measures for our banner */
+     header {
+         width: 100%;
+         height: 64px;
+         background-color: rgb(98,220,249);
+         border:0;
+         padding:0;
+         display: block;
+    }
+     header img {
+         width:auto;
+         height:64px;
+         float: right;
+    }
+     input {
+         height: 64px;
+         width: 70px;
+         float: left;
+         cursor: pointer;
+         border: none;
+    }
+    /*---------NAVIGATION----------*/
+    /* here we style the list that is our NAVIGATION */
+     nav ul {
+         padding-left: 10px;
+         list-style-type: none;
+    }
+     .dropdown {
+         position: relative;
+         display: inline-block;
+    }
+     #dropdown-content {
+         margin-top: 64px;
+         display: none;
+         position:absolute;
+         background-color: #f9f9f9;
+         min-width: 130px;
+    }
+     #dropdown-content a {
+         color: black;
+         padding: 12px 16px;
+         text-decoration: none;
+         display: block;
+    }
+     #dropdown-content ul li a:hover {
+         text-decoration: underline;
+    }
+     noscript ul {
+         background-color: rgb(98,220,249);
+         margin: 0 0 0 0;
+         padding-left: 0px;
+    }
+     noscript ul li {
+         display: inline;
+         padding: 0px 12px 0px 12px;
+    }
+
+    /*---------MAIN----------*/
+     main :not(img) {
+         font-family: "Times New Roman", Times, serif;
+         margin-top: 5px;
+         margin-bottom: 10px;
+         max-width: 90%;
+         padding-left: 5%;
+         padding-right: 5%;
+    }
+     main img {
+         width: 90%;
+         padding:15px 0 0 5%;
+    }
+     #banner {
+         width:100%;
+         padding-left:0;
+    }
+     #eats {
+         text-align: center;
+         border-top: 2px solid black;
+         border-bottom: 2px solid black;
+    }
+     .nicebox {
+         position: relative;
+         background-color: #FFC;
+         padding:32px;
+         margin:25px 0 25px 18%;
+         text-align: center;
+         max-width: 200px;
+         border:1px solid;
+    }
+
+
+    /* gives the effect of the sticky notes on the explore page
+      the source of inspiration for this box comes from:
+      https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/create_fancy_boxes */
+     .nicebox::before {
+         content: "";
+         position : absolute;
+         z-index : -1;
+         bottom : 15px;
+         right : 5px;
+         width : 70%;
+         top : 80%;
+         max-width: 360px;
+         box-shadow: 0px 13px 10px black;
+         transform: rotate(4deg);
+    }
+    /*---------ASIDE----------*/
+     aside {
+         display: flex;
+         flex-flow: row wrap;
+         width: 100%;
+         background-color: rgb(171,205,216);
+    }
+     aside ul {
+         display: table;
+         margin: 0 auto;
+         padding-left: 0;
+         width: 100%;
+    }
+     aside ul li {
+         display:block;
+         text-align: center;
+         list-style-type: none;
+         padding-top: 5px;
+         padding-bottom: 5px;
+         width: 100%;
+         height: 100%;
+         border-bottom: 2px solid #ffffff;
+    }
+     aside ul li a {
+         display: block;
+         width: 100%;
+         text-decoration: none;
+         color: black;
+    }
+    /*---------CONTACT FORM----------*/
+     label {
+         display: block;
+    }
+     input[type=text],input[type=email] {
+         width: 100%;
+         padding: 12px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         box-sizing: border-box;
+         margin-top: 6px;
+         margin-bottom: 16px;
+         resize: vertical;
+    }
+     input[type=submit],input[type=reset] {
+         background-color:rgb(98,220,249);
+         color: black;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+         margin-right: 30px;
+         width: 30%;
+    }
+     input[type=reset] {
+         float: right;
+    }
+     input[type=reset]:hover,input[type=submit]:hover {
+         background-color:rgb(76,165,193);
+    }
+     textarea {
+         width: 100%;
+         padding: 12px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         box-sizing: border-box;
+         margin-top: 6px;
+         margin-bottom: 16px;
+         resize: vertical;
+         height: 200px;
+        ;
+    }
+    /*---------FOOTER----------*/
+     footer {
+         display: flex;
+         flex-direction: column;
+         width: 70%;
+         padding-left: 10%;
+         padding-right: 10%;
+         background-color:rgb(245,245,245);
+    }
+     .end {
+         width: 100%;
+         margin-right: 5%;
+    }
+     .sitemap {
+         width: 100%;
+    }
+     .sitemap ul {
+         list-style-type: none;
+         padding-left: 0;
+    }
+}
+/* ======================================================= BIGGER SCREENS =========================================================== */
+@media screen and (min-width:767px) {
+
+    /*---------GENERAL----------*/
+     #bold {
+         font-weight: bold;
+    }
+     #banner {
+         width:100%;
+         margin-top: 10px;
+         max-height:700px;
+    }
+
+    /*---------HEADER----------*/
+     input {
+         display: none;
+    }
+     header {
+         width: 100%;
+         height:122px;
+         background-color: rgb(98,220,249);
+         border:0;
+         padding:0;
+         display: block;
+    }
+     header img {
+         height: 85px;
+         margin: 5px 0 0 10px;
+    }
+
+    /*---------NAV----------*/
+     #dropdown-content {
+         display: block;
+         width: 100%;
+         z-index: 1;
+    }
+     #dropdown-content ul {
+         list-style: none;
+         overflow: hidden;
+         text-align: center;
+         background-color: #25A7D1;
+         margin-top: 0;
+         padding-left: 0;
+    }
+     #dropdown-content ul li {
+         padding-right: 30px;
+         display: inline;
+    }
+     #dropdown-content ul li a {
+         display: inline-block;
+         color: white;
+         text-align: center;
+         text-decoration: none;
+         padding: 10px;
+    }
+     #dropdown-content ul li a:hover {
+         background-color: #1494BC;
+    }
+
+    /*---------MAIN----------*/
+     main {
+         display: block;
+         font-family: "Times New Roman", Times, serif;
+         margin-top: 5px;
+         margin-bottom: 10px;
+         max-width: 70%;
+         padding:0 15% 0 15%;
+    }
+    #double {
+        display: inline-flex;
+        padding-bottom: 20px;
+    }
+    #double img {
+         margin-right: 5% ;
+         width: 50%;
+         height: 50%;
+    }
+     #eats {
+         text-align: center;
+         border-bottom: 2px solid black;
+    }
+    .nicebox {
+         position: relative;
+         background-color: #FFC;
+         padding: 15px;
+         text-align: center;
+         max-width: 250px;
+         border: 1px solid;
+         margin: 0 10% 0 5%;
+    }
+
+    /* gives the effect of the sticky notes on the explore page
+      the source of inspiration for this box comes from:
+      https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/create_fancy_boxes */
+    .nicebox::before {
+         content: "";
+         position:absolute;
+         z-index:-1;
+         bottom:15px;
+         right:5px;
+         width:50%;
+         top:80%;
+         max-width:200px;
+         box-shadow: 0px 13px 10px black;
+         transform: rotate(4deg);
+    }
+
+    /*---------ASIDE(the jump menu)----------*/
+     aside {
+         width: 100%;
+         position:-webkit-sticky; /* For safari browser */
+         position: sticky;
+         top: 0;
+    }
+     aside ul {
+         display: block;
+         position: absolute;
+         margin: 0 ;
+         padding-left:0;
+         border: 0;
+         width: 15%;
+    }
+     aside ul li {
+         display:block;
+         text-align: left;
+         list-style-type: none;
+         padding: 5px 0 5px 0;
+         width: 75%;
+         height: 100%;
+         border-bottom: 3px solid #333;
+    }
+     aside ul li a {
+         display: block;
+         width: 81%;
+         text-decoration: none;
+         color: black;
+         padding: 8px 16px;
+    }
+     aside ul li a:hover {
+         background-color: #555;
+         color: white;
+    }
+
+    /*---------CONTACT FORM----------*/
+
+     label {
+         display: block;
+    }
+     input[type=text],input[type=email] {
+         display: block;
+         width: 100%;
+         padding: 12px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         box-sizing: border-box;
+         margin: 6px 0 16px 0;
+         resize: vertical;
+    }
+     input[type=submit],input[type=reset] {
+         display: block;
+         background-color:rgb(98,220,249);
+         color: black;
+         border: none;
+         border-radius:4px;
+         cursor: pointer;
+         width: 10%;
+         display: inline-flex;
+         margin-top: 20px;
+         height: 50px;
+    }
+     input[type=reset] {
+         margin-left: 20px;
+    }
+     input[type=reset]:hover,input[type=submit]:hover {
+         background-color:rgb(76,165,193);
+    }
+     textarea {
+         width: 100%;
+         padding: 12px;
+         border: 1px solid #ccc;
+         border-radius: 4px;
+         box-sizing: border-box;
+         margin: 6px 0 16px 0;
+         resize: vertical;
+         height: 200px;
+    }
+
+    /*---------FOOTER----------*/
+
+      /*sets the contents of the footer within the 80% of the main content */
+     footer {
+         display: flex;
+         width: 80%;
+         padding:0 10% 0 10%;
+         background-color:rgb(245,245,245);
+    }
+     .end {
+         width: 45%;
+         margin-right: 5%;
+         padding-left: 8%;
+    }
+     .sitemap {
+         width: 45%;
+         padding-left: 15%;
+    }
+     .sitemap ul {
+         list-style-type: none;
+         padding-left: 0;
+    }
+
+    /*---------SOCIAL MEDIA ICONS----------*/
+
+     #socialmedia ul li {
+         list-style: none;
+         display: inline-block;
+         padding: 0 10px 0 10px; /* a comfortable distance between the icons */
+    }
+          /*puts the list on the right side of the banner */
+     #socialmedia {
+         float: right;
+         display: inline;
+         height: 83px;
+         padding-bottom: 0;
+    }
+     .socialicon {
+         height: 55px;
+    }
+    /* it won't show the noscript which is made for the mobile version */
+     noscript{
+         display:none;
+    }
+}
